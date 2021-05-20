@@ -15,6 +15,8 @@ body {
 
 header {
     padding: 32px;
+    width: 95%;
+    margin: 0 auto;
 }
 
 input {
@@ -28,8 +30,6 @@ input {
 }
 
 .container {
-    width: 95%;
-    margin: 0 auto;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -56,3 +56,37 @@ input {
 .img-author {
     margin: 0 8px ;
 }
+
+main {
+    padding: 32px;
+}
+
+.menu-titulo {
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.menu-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item a{
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: Inter;
+    opacity: 56%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.menu-item img {
+    margin: 8px 16px;
+    margin-left: 0;
+}
+
