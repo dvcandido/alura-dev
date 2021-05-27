@@ -24,7 +24,7 @@
         </div>
     </header>
     <main>
-        <nav>
+        <nav class="menu">
             <span class="menu-titulo">Menu</span>
             <ul class="menu-lista">
                 <li class="menu-item">
@@ -35,6 +35,39 @@
                 </li>
             </ul>
         </nav>
+        <section class="editor">
+            <textarea name="editor" id="editor-codigo" rows="13">
+                const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+                const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                
+                const unfold = (f, seed) => {
+                  const go = (f, seed, acc) => {
+                    const res = f(seed)
+                    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+                  }
+                  return go(f, seed, [])
+                }</textarea>
+            <button id="editor-highlight">Visualizar com o highlight</button>
+        </section>
+        <div class="cadastro">
+            <section class="seu-projeto">
+                <span class="menu-titulo">Seu Projeto</span>
+                <input type="text" name="projeto" id="projeto" placeholder="Nome do seu projeto" />
+                <textarea name="descricao" id="descricao" rows="3" placeholder="Descrição do seu projeto"></textarea>
+            </section>
+            <section class="personalizacao">
+                <span class="menu-titulo">personalização</span>
+                <select name="linguagem" id="linguagem">
+                    <option class="linguagem-opcao" value="1" selected>JavaScript</option>
+                    <option class="linguagem-opcao" value="2">HTML</option>
+                    <option class="linguagem-opcao" value="3">CSS</option>
+                </select>
+                <input type="color" name="cor" id="cor" class="selecao-cor" value="#6BD1FF">
+                <button class="cadastro-salvar">Salvar projeto</button>
+            </section>
+        </div>
     </main>
 </body>
+
 </html>

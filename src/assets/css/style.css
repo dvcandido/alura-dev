@@ -1,92 +1,202 @@
 body {
-    background: #051D3B;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    color: #FFFFFF;
+  background: #051d3b;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #ffffff;
 }
 
-::placeholder { /* Internet Explorer 10-11 */
-    color: #FFFFFF;
-    opacity: 64%;
+::placeholder {
+  /* Internet Explorer 10-11 */
+  color: #ffffff;
 }
 
 header {
-    padding: 32px;
-    width: 95%;
-    margin: 0 auto;
+  padding: 32px;
+  width: 95%;
+  margin: 0 auto;
 }
 
-input {
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: left;
+input[type="text"],
+input[type="search"],
+textarea,
+select {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  border: 0;
+  color: #ffffff;
+  opacity: 0.64;
+  padding: 16px 14px;
+  margin: 8px 0px;
 }
 
 .container {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-controle {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  border: 0;
+  color: #ffffff;
+  padding: 16px 14px;
+  margin: 8px 0px;
 }
 
 .input-busca {
-    background: rgba(255, 255, 255, 0.16);
-    border-radius: 8px;
-    width: 752px;
-    border: 0;
-    color: #FFFFFF;
-    padding: 16px 14px;
+  width: 752px;
 }
 
 .img-logo {
-    margin: 12px 0;
+  margin: 12px 0;
 }
 
 .author {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .img-author {
-    margin: 0 8px ;
+  margin: 0 8px;
 }
 
 main {
-    padding: 32px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-titulo {
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    font-size: 12px;
-    line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 8px;
 }
 
 .menu-lista {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.menu-item a{
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-    font-family: Inter;
-    opacity: 56%;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    text-decoration: none;
+.menu-item a {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-family: Inter;
+  opacity: 56%;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .menu-item img {
-    margin: 8px 16px;
-    margin-left: 0;
+  margin: 8px 16px;
+  margin-left: 0;
 }
 
+.cadastro {
+  display: flex;
+  flex-direction: column;
+  width: 272px;
+}
+
+.seu-projeto {
+  display: flex;
+  flex-direction: column;
+}
+
+.seu-projeto textarea {
+  resize: none;
+  flex-basis: 100%;
+}
+
+.seu-projeto input {
+  flex-basis: 100%;
+}
+
+.personalizacao {
+  display: flex;
+  flex-direction: column;
+}
+
+.personalizacao .menu-titulo {
+  margin-top: 32px;
+}
+
+.linguagem-opcao {
+  background-color: #051d3b;
+}
+
+.selecao-cor {
+  padding: 0;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: rgba(196, 196, 196, 0.01);
+  width: 100%;
+  height: 56px;
+  padding: 8px;
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.cadastro-salvar {
+  background: #5081fb;
+  border-radius: 8px;
+  height: 56px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #051d3b;
+  border: 0;
+}
+
+.editor {
+  display: flex;
+  flex-direction: column;
+  width: 752px;
+}
+
+#editor-codigo {
+  border: solid #6bd1ff 32px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+#editor-highlight {
+  background: rgba(80, 129, 251, 0.08);
+  border-radius: 8px;
+  height: 56px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  border: 0;
+}
